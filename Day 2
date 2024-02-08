@@ -1,4 +1,6 @@
 //Binary Search Implementation
+//Time Complexity-O(logn)
+//Space complexity-O(1)
 
 class Solution {
 public:
@@ -20,6 +22,28 @@ public:
         }
         return -1;
 
+    }
+};
+
+//Selection sort
+Time cmplexity-O(n^2)
+Space Complexity-O(1)
+
+class Solution {
+public:
+    vector<int> sortArray(vector<int>& nums) {
+        int n=nums.size();
+        for(int i=0;i<n;i++){
+            int minidx=i;
+            for(int j=i+1;j<n;j++){
+                if(nums[j]<nums[minidx]){
+                    minidx=j;
+                }
+            }
+            swap(nums[i],nums[minidx]);
+        }
+        return nums;
+        
     }
 };
 
